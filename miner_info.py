@@ -20,8 +20,8 @@ def main():
         if address[0] == 'sia':
             res =  api.nanopool_coin(api.NANOPOOL_SIA, address[1])
             price = api.cryptocompare_price(api.CRYPTOCOMPARE_SIA)
-        print 'Current %s hashrate: %5s   MH\s %s balance:  %s' % (address[0].upper(), res['hashrate'], address[0].upper(),  res['balance'])
-        print 'Current %s price: %-10s' % (address[0].upper(), price)
+        print '%s hashrate: %5s   MH\s %s balance:  %s' % (address[0].upper(), res['hashrate'], address[0].upper(),  res['balance'])
+        print '%s price: %-10s' % (address[0].upper(), price)
         total_km_value += res['balance'] * price * 1.95
 
     print "Total value in km: " + str(total_km_value)
